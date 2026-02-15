@@ -1,0 +1,37 @@
+package aplicacao;
+
+import java.util.Scanner;
+
+import entidade.Produto;
+
+
+public class Estoque {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		Produto produto = new Produto();
+		
+		System.out.println("informe o nome do produto");
+		
+		produto.nome = sc.nextLine();
+		
+		System.out.println("informe o preco do produto");
+		
+		produto.preco = sc.nextDouble();
+		
+		System.out.println("informe a quantidade em estoque");
+				
+		produto.quantidade = sc.nextInt();
+		
+		System.out.println(produto);
+		
+		
+		
+		
+		sc.close();
+
+	}
+
+}
