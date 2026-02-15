@@ -2,35 +2,42 @@ package aplicacao;
 
 import java.util.Scanner;
 
+import entidade.Triangulo;
+//importaçao da nova classe triangulo 
 public class Program {
 
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		double xA, xB, xC, yA, yB, yC;
+		Triangulo x, y;
+		// substituicao das tres variaveis independentes pela classe triangulo
+		
+		x = new Triangulo();
+		y = new Triangulo();
+		//instanciando 
 		
 		System.out.println("digite as medidas do triangulo x: ");
 		
-		xA = sc.nextDouble();
-		xB = sc.nextDouble();
-		xC = sc.nextDouble();
+		x.a = sc.nextDouble();
+		x.b = sc.nextDouble();
+		x.c = sc.nextDouble();
 		
 		System.out.println("digite as medidas do triangulo y: ");
 		
-		yA = sc.nextDouble();
-		yB = sc.nextDouble();
-		yC = sc.nextDouble();
+		y.a = sc.nextDouble();
+		y.b = sc.nextDouble();
+		y.c = sc.nextDouble();
 		
-		double p = (xA + xB + xC)/2;
+		double p = (x.a + x.b + x.c)/2;
 		//parte da formula da area
 		// p=(a+b+c)/2
 		
-		double areaX = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
+		double areaX = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
 		//area= raiz quadrada de p(p-a)(p-b)(p-c)
 		
-		       p = (yA + yB + yC)/2;
-		double areaY = Math.sqrt(p * (p - yA) * (p - yB) * (p - yC));
+		       p = (y.a + y.b + y.c)/2;
+		double areaY = Math.sqrt(p * (p - y.a) * (p - y.b) * (p - y.c));
 		
 		System.out.printf("area do triangulo x:%.4f%n ", areaX);
 		//mostrar resultado com 4 casa após a virgula
